@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky NavBar</title>
+
+    <style>
+        body{
+            margin: 0px;
+        }
+        #header{
+            text-align: center;
+        }
+        #menu{
+            text-align: center;
+            background-color: brown;
+        }
+        #menu li{
+            display:inline;
+            padding: 15px;
+            color: greenyellow;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #container{
+            text-align: center;
+            padding: 50px 100px;  
+        }
+        .sticky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="HCI.png" alt="Image of Human Computer Interaction">
+    </div>
+    <nav id="menu">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Core Subjects</li>
+        <li>GATE Notes</li>
+        <li>Help/Enquiry</li>
+    </nav>
+    <div id="container">
+        <h1>TCP/IP</h1>
+
+        <p>
+            <b>The</b> main design goal of TCP/IP was to build an interconnection of networks, 
+            referred to as an internetwork, or internet, that provided universal 
+            communication services over heterogeneous physical networks. The clear 
+            benefit of such an internetwork is the enabling of communication between hosts 
+            on different networks, perhaps separated by a large geographical area. 
+            The words internetwork and internet are simply a contraction of the phrase 
+            interconnected network. However, when written with a capital “I”, the Internet 
+            refers to the worldwide set of interconnected networks. Therefore, the Internet is 
+            an internet, but the reverse does not apply. The Internet is sometimes called the
+            connected Internet.
+            The Internet consists of the following groups of networks:
+            -> Backbones: Large networks that exist primarily to interconnect other 
+            networks. Also known as network access points (NAPs) or Internet Exchange 
+            Points (IXPs). Currently, the backbones consist of commercial entities. 
+            -> Regional networks connecting, for example, universities and colleges.
+            -> Commercial networks providing access to the backbones to subscribers, and 
+            networks owned by commercial organizations for internal use that also have 
+            connections to the Internet.
+            -> Local networks, such as campus-wide university networks.
+            In most cases, networks are limited in size by the number of users that can 
+            belong to the network, by the maximum geographical distance that the network 
+            can span, or by the applicability of the network to certain environments. For 
+            example, an Ethernet network is inherently limited in terms of geographical size. 
+            Therefore, the ability to interconnect a large number of networks in some 
+            hierarchical and organized fashion enables the communication of any two hosts 
+            belonging to this internet
+
+            Another important aspect of TCP/IP internetworking is the creation of a 
+standardized abstraction of the communication mechanisms provided by each 
+type of network. Each physical network has its own technology-dependent 
+communication interface, in the form of a programming interface that provides 
+basic communication functions (primitives). TCP/IP provides communication 
+services that run between the programming interface of a physical network and 
+user applications. It enables a common interface for these applications, 
+independent of the underlying physical network. The architecture of the physical 
+network is therefore hidden from the user and from the developer of the 
+application. The application need only code to the standardized communication 
+abstraction to be able to function under any type of physical network and 
+operating platform.
+
+Like most networking software, TCP/IP is modeled in layers. This layered 
+representation leads to the term protocol stack, which refers to the stack of 
+layers in the protocol suite. It can be used for positioning (but not for functionally 
+comparing) the TCP/IP protocol suite against others, such as Systems Network 
+Architecture (SNA) and the Open System Interconnection (OSI) model. 
+Functional comparisons cannot easily be extracted from this, because there are 
+basic differences in the layered models used by the different protocol suites. 
+By dividing the communication software into layers, the protocol stack allows for 
+division of labor, ease of implementation and code testing, and the ability to 
+develop alternative layer implementations. Layers communicate with those 
+above and below via concise interfaces. In this regard, a layer provides a service 
+for the layer directly above it and makes use of services provided by the layer 
+directly below it. For example, the IP layer provides the ability to transfer data 
+from one host to another without any guarantee to reliable delivery or duplicate 
+suppression. Transport protocols such as TCP make use of this service to 
+provide applications with reliable, in-order, data stream delivery.
+
+This section describes how to use the PPP encapsulation over ISDN 
+point-to-point links. PPP over ISDN is documented by elective RFC 1618. 
+Because the ISDN B-channel is, by definition, a point-to-point circuit, PPP is well 
+suited for use over these links.
+The ISDN Basic Rate Interface (BRI) usually supports two B-channels with a 
+capacity of 64 kbps each, and a 16 kbps D-channel for control information. 
+B-channels can be used for voice or data or just for data in a combined way.
+The ISDN Primary Rate Interface (PRI) can support many concurrent B-channel 
+links (usually 30) and one 64 Kbps D-channel. The PPP LCP and NCP 
+mechanisms are particularly useful in this situation in reducing or eliminating 
+manual configuration and facilitating ease of communication between diverse 
+implementations. The ISDN D-channel can also be used for sending PPP 
+packets when suitably framed, but is limited in bandwidth and often restricts 
+communication links to a local switch.
+PPP treats ISDN channels as bit- or octet-oriented synchronous links. These 
+links must be full-duplex, but can be either dedicated or circuit-switched. PPP 
+presents an octet interface to the physical layer. There is no provision for 
+sub-octets to be supplied or accepted. PPP does not impose any restrictions 
+regarding transmission rate other than that of the particular ISDN channel 
+interface. PPP does not require the use of control signals. When available, using 
+such signals can allow greater functionality and performance.
+The definition of various encodings and scrambling is the responsibility of the 
+DTE/DCE equipment in use. While PPP will operate without regard to the 
+underlying representation of the bit stream, lack of standards for transmission will 
+hinder interoperability as surely as lack of data link standards. The D-channel 
+interface requires Non-Return-To-Zero (NRZ) encoding. Therefore, it is 
+recommended that NRZ be used over the B-channel interface. This will allow 
+frames to be easily exchanged between the B- and D-channels. However, when 
+the configuration of the encoding is allowed, NRZ Inverted (NRZI) is 
+recommended as an alternative in order to ensure a minimum ones density 
+where required over the clear B-channel. Implementations that want to 
+interoperate with multiple encodings can choose to detect those encodings 
+automatically. Automatic encoding detection is particularly important for primary 
+rate interfaces to avoid extensive preconfiguration.
+Terminal adapters conforming to V.1201 can be used as a simple interface to 
+workstations. The terminal adapter provides asynchronous-to-synchronous 
+conversion. Multiple B-channels can be used in parallel. V.120 is not 
+interoperable with bit-synchronous links, because V.120 does not provide octet.
+
+This topic describes the encapsulation of IP over X.25 networks, in accordance 
+with ISO/IEC and CCITT standards. IP over X.25 networks is documented by 
+RFC 1356 (which obsoletes RFC 877). RFC 1356 is a Draft Standard with a 
+status of elective. The substantive change to the IP encapsulation over X.25 is 
+an increase in the IP datagram MTU size, the X.25 maximum data packet size, 
+the virtual circuit management, and the interoperable encapsulation over X.25 of 
+protocols other than IP between multiprotocol routers and bridges.
+One or more X.25 virtual circuits are opened on demand when datagrams arrive 
+at the network interface for transmission. Protocol data units (PDUs) are sent as 
+X.25 complete packet sequences. That is, PDUs begin on X.25 data packet 
+boundaries and the M bit (more data) is used to fragment PDUs that are larger 
+than one X.25 data packet in length. In the IP encapsulation, the PDU is the IP 
+datagram. The first octet in the call user data (CUD) field (the first data octet in 
+the Call Request packet) is used for protocol demultiplexing in accordance with 
+the Subsequent Protocol Identifier (SPI) in ISO/IEC TR 9577. This field contains 
+a one octet network-layer protocol identifier (NLPID), which identifies the 
+network-layer protocol encapsulated over the X.25 virtual circuit. For the Internet 
+community, the NLPID has four relevant values:
+ The value hex CC (binary 11001100, decimal 204) is IP
+
+The value hex 00 identifies the null encapsulation used to multiplex multiple 
+network-layer protocols over the same circuit. RFC 3232 contains one other 
+non-CCITT and non-ISO/IEC value that has been used for Internet X.25 
+encapsulation identification, namely hex C5 (binary 11000101, decimal 197) for 
+Blacker X.25. This value may continue to be used, but only by prior 
+preconfiguration of the sending and receiving X.25 interfaces to support this 
+value. The hex CD (binary 11001101, decimal 205), listed in RFC 3232 for 
+ISO-IP, is also used by Blacker and can only be used by prior preconfiguration of 
+the sending and receiving X.25 interfaces.
+Each system must only accept calls for protocols it can process. Every Internet 
+system must be able to accept the CC encapsulation for IP datagrams. Systems 
+that support NLPIDs other than hex CC (for IP) should allow their use to be 
+configured on a per-peer address basis. The Null encapsulation, identified by a 
+NLPID encoding of hex 00, is used in order to multiplex multiple network-layer 
+protocols over one circuit. When the Null encapsulation is used, each X.25 
+complete packet sequence sent on the circuit begins with a one-octet NLPID, 
+which identifies the network-layer protocol data unit contained only in that 
+particular complete packet sequence. Further, if the SNAP NLPID (hex 80) is 
+used, the NLPID octet is immediately followed by the five-octet SNAP header, 
+which is then immediately followed by the encapsulated PDU. The encapsulated 
+network-layer protocol can differ from one complete packet sequence to the next 
+over the same circuit.
+Use of the single network-layer protocol circuits is more efficient in terms of 
+bandwidth if only a limited number of protocols are supported by a system. It also 
+allows each system to determine exactly which protocols are supported by its 
+communicating partner. Other advantages include being able to use X.25 
+accounting to detail each protocol and different quality of service or flow control 
+windows for different protocols. The Null encapsulation, for multiplexing, is useful 
+when a system, for any reason (such as implementation restrictions or network.
+        </p>
+    </div>
+
+    <script>
+        window.addEventListener('scroll',function(){
+            // We have to detect 
+            let bar = document.getElementById("menu");
+            if(window.pageYOffset >= 100){
+                bar.classList.add('sticky');
+            }
+            else{
+                bar.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>
